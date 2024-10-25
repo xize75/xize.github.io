@@ -69,6 +69,180 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-第6章 指针" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/10/25/%E7%AC%AC6%E7%AB%A0%20%E6%8C%87%E9%92%88/" class="article-date">
+  <time class="dt-published" datetime="2024-10-25T08:31:03.987Z" itemprop="datePublished">2024-10-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="第六章-指针"><a href="#第六章-指针" class="headerlink" title="第六章 指针"></a>第六章 指针</h1><h2 id="1-内存和地址"><a href="#1-内存和地址" class="headerlink" title="1. 内存和地址"></a>1. 内存和地址</h2><ol>
+<li>计算机的内存由数以亿万计的位（bit）组成，每个位可以容纳值0或1。</li>
+<li>一个位所能表示的值的范围太有限，通常将许多为合成一组作为一个单位。</li>
+<li>在许多现代的机器上。每个字节（byte）包含8个位，可以存储无符号值0~255，或有符号值-128~127。</li>
+<li>为了存储更大的值，我们把两个或更多个字节结合在一起作为一个更大的内存单位。</li>
+<li><font color='orange'>记住</font>：名字与内存位置之间的关联并不是硬件来提供的，而是编译器为我们实现的。</li>
+</ol>
+<h2 id="2-值和类型"><a href="#2-值和类型" class="headerlink" title="2. 值和类型"></a>2. 值和类型</h2><p>​	不能简单地通过检查一个值的位来判断它的类型。</p>
+<p>​	<font color='red'>指针的值表示的是内存地址的变量。</font></p>
+<p>​	<font color='red'>指针的类型是通过值的使用方法隐式确定的。</font></p>
+<h2 id="3-指针变量的内容"><a href="#3-指针变量的内容" class="headerlink" title="3. 指针变量的内容"></a>3. 指针变量的内容</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">112</span>;</span><br><span class="line"><span class="type">float</span> b = <span class="number">3.14</span>;</span><br><span class="line"><span class="type">int</span> *c = &amp;a;</span><br><span class="line"><span class="type">float</span> *d;</span><br><span class="line">d = &amp;b;</span><br></pre></td></tr></table></figure>
+
+<p>指针的初始化通过&amp;操作符来完成。</p>
+<p><font color='red' size=5px>变量的值就是分配给该变量的内存位置所存储的值。</font></p>
+<h2 id="4-间接访问操作符"><a href="#4-间接访问操作符" class="headerlink" title="4. 间接访问操作符"></a>4. 间接访问操作符</h2><p>​	通过一个指针访问它所指向的地址的过程称为间接访问或解引用指针。</p>
+<p>​	这个用于执行间接访问的操作符是单目操作符&#x3D;&#x3D;*&#x3D;&#x3D;。</p>
+<p>​	<u>如果是一个指向整型的指针，对它将进行解引用操作将产生一个整型值。</u>类似的，float *也是如此。</p>
+<p><font color='red' size=5px>注意：</font>指针并不存在内建的间接访问属性，所以除非表达式中存在间接访问操作符，否则不能按箭头所示实际访问它所指向的位置。</p>
+<h2 id="5-未初始化和非法的指针"><a href="#5-未初始化和非法的指针" class="headerlink" title="5. 未初始化和非法的指针"></a>5. 未初始化和非法的指针</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//非法的指针</span></span><br><span class="line"><span class="type">int</span>* a;</span><br><span class="line">*a = <span class="number">12</span></span><br></pre></td></tr></table></figure>
+
+<p>​	我们声明了一个变量，但从未对他对他进行初始化，所以没有办法预测12这个值将储存于什么地方。不会“创建”用于存储整型值的内存空间。</p>
+<h2 id="6-NULL指针"><a href="#6-NULL指针" class="headerlink" title="6. NULL指针"></a>6. NULL指针</h2><p>​	标准定义了NULL指针，它作为一个特殊的指针变量，表示不指向任何东西。</p>
+<p>​	要使一个指针变量为NULL，可以给它赋一个零值。</p>
+<p>​	为了测试一个指针变量是否为NULL可以将它与零值进行比较。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>* a， *c;</span><br><span class="line"><span class="type">int</span> b = <span class="number">12</span>;</span><br><span class="line">c = <span class="literal">NULL</span>;   <span class="comment">//空初始化</span></span><br><span class="line">a = &amp;b;   <span class="comment">//赋值初始化</span></span><br><span class="line"><span class="keyword">if</span> (a == <span class="number">0</span>) &#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a为空\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> &#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;a不为空，为:%d\n&quot;</span>, *a);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(c == <span class="number">0</span>)</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;c为空\n&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>对所有的指针变量进行显式的初始化是种好做法。</p>
+<h2 id="7-指针、间接访问和左值"><a href="#7-指针、间接访问和左值" class="headerlink" title="7. 指针、间接访问和左值"></a>7. 指针、间接访问和左值</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">	<span class="type">int</span>* a;</span><br><span class="line">	<span class="type">int</span>* b;</span><br><span class="line">	<span class="type">int</span> x = <span class="number">10</span>, y = <span class="number">5</span>;</span><br><span class="line">	a = &amp;x, b = &amp;y;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d  %d\n&quot;</span>, *a, *b);  <span class="comment">//10  5</span></span><br><span class="line">	*a = <span class="number">10</span> + *a;</span><br><span class="line">    <span class="comment">//b = 10 - *b;    非法（将一个整型数量（10- *b）存储于一个指针变量中）</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d  %d\n&quot;</span>, *a, x);  <span class="comment">//20  20</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​	指针变量可以作为左值，并不是因为它是指针，而是因为它是变量，如a， b。</p>
+<p>​	对指针进行间接访问表示我们应该访问指针所指向的位置，如*a，*b。</p>
+<h2 id="8-指针、间接访问和变量"><a href="#8-指针、间接访问和变量" class="headerlink" title="8. 指针、间接访问和变量"></a>8. 指针、间接访问和变量</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//把值25赋给变量a</span></span><br><span class="line">*&amp;a = <span class="number">25</span>;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>首先，&amp;操作符产生变量a的地址，他是一个指针常量；</li>
+<li>接着，*操作符访问其操作数所表示的地址。</li>
+<li>在这个表达式中，操作数是a的地址，所以值25就存储于a中。</li>
+</ol>
+<h2 id="9-指针常量"><a href="#9-指针常量" class="headerlink" title="9. 指针常量"></a>9. 指针常量</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//假定变量a存储于位置100</span></span><br><span class="line">*<span class="number">100</span> = <span class="number">25</span>；  <span class="comment">//这条语句的作用是什么？合法吗？</span></span><br></pre></td></tr></table></figure>
+
+<p>​	答案是非法的，因为字面值100的类型是整型，而间接访问操作只能作用于指针类型表达式。</p>
+<p>​	如果确实想把25存储于位置100，就必须使用强制类型转换。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*(<span class="type">int</span> *)<span class="number">100</span> = <span class="number">25</span>;</span><br></pre></td></tr></table></figure>
+
+<p>​	但这也仅仅是合法的，因为通常无法预测编译器会把某个特定的变量放在内存中的什么位置，所以无法预先知道它的地址。</p>
+<p>​	这个技巧唯一有用之处是偶尔需要通过地址访问内存中某个特定的位置时，它并不是用于访问某个变量，而是用于访问硬件本身。如，操作系统需要与输入输出设备控制器通信，它将启动I&#x2F;O操作并从前面的操作中获得结果。</p>
+<h2 id="10-指针的指针"><a href="#10-指针的指针" class="headerlink" title="10. 指针的指针"></a>10. 指针的指针</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">12</span>;</span><br><span class="line"><span class="type">int</span> *b = &amp;a;</span><br><span class="line"><span class="type">int</span> **c = &amp;b;</span><br><span class="line"><span class="comment">//  *操作符具有从右向左的结合性，</span></span><br><span class="line"><span class="comment">//  所以**c相当于*(*c)。</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center">表达式</th>
+<th align="center">相当于的表达式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">a</td>
+<td align="center">12</td>
+</tr>
+<tr>
+<td align="center">b</td>
+<td align="center">&amp;a</td>
+</tr>
+<tr>
+<td align="center">*b</td>
+<td align="center">a, 12</td>
+</tr>
+<tr>
+<td align="center">c</td>
+<td align="center">&amp;b</td>
+</tr>
+<tr>
+<td align="center">*c</td>
+<td align="center">b, &amp;a</td>
+</tr>
+<tr>
+<td align="center">**c</td>
+<td align="center">*b, a, 12</td>
+</tr>
+</tbody></table>
+<h2 id="11-指针表达式"><a href="#11-指针表达式" class="headerlink" title="11. 指针表达式"></a>11. 指针表达式</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> ch;</span><br><span class="line"><span class="type">char</span> *cp = &amp;ch;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>ch  (p100)</li>
+</ol>
+<p>​	当ch作为右值使用时，表达式的值为‘a’。</p>
+<p>​	当ch作为左值使用时，它是这个内存的地址。&#x3D;&#x3D;所以当它为右值时，&amp;ch是非法的。&#x3D;&#x3D;</p>
+<ol start="2">
+<li>间接访问操作符是少数几个其结果为左值的操作符之一。</li>
+<li></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">表达式</th>
+<th align="center">左值</th>
+<th align="center">右值</th>
+<th align="left">执行步骤</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">*++cp</td>
+<td align="center">那个位置本身</td>
+<td align="center">ch后面那个内存地址的值</td>
+<td align="left">类似于下面。</td>
+</tr>
+<tr>
+<td align="center">*cp++</td>
+<td align="center">ch的内存位置</td>
+<td align="center">变量ch的值</td>
+<td align="left">a. ++操作符产生cp的一份副本；<br />b. 然后++操作符增加cp的值； <br />c. 在cp的副本上执行间接访问操作。</td>
+</tr>
+</tbody></table>
+<ol start="4">
+<li><p><font color='blue' size = 4>后缀++操作符的优先级高于*操作符。</font></p>
+</li>
+<li></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">表达式</th>
+<th align="center">左值</th>
+<th align="center">右值</th>
+<th>执行步骤</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">++*cp</td>
+<td align="center">非法</td>
+<td align="center">增值后的值的一个副本</td>
+<td>a. 执行间接访问操作符；<br />b. cp所指向的位置的值增加1。</td>
+</tr>
+</tbody></table>
+<h2 id="12-指针运算"><a href="#12-指针运算" class="headerlink" title="12. 指针运算"></a>12. 指针运算</h2><p>​	当一个指针和一个整数量执行算数运算时，整数在执行加法运算前始终会根据合适的大小进行调整。</p>
+<p>​	这个“合适的大小”就是指针所指向类型的大小，“调整”九十八整数值和“合适的大小”相乘。</p>
+<h3 id="12-1-算术运算"><a href="#12-1-算术运算" class="headerlink" title="12.1 算术运算"></a>12.1 算术运算</h3><p>​	形式：a. 指针 +&#x2F;- 整数    b. 指针 - 指针</p>
+<h4 id="a-指针-整数"><a href="#a-指针-整数" class="headerlink" title="a. 指针 +&#x2F;- 整数"></a>a. 指针 +&#x2F;- 整数</h4><p>​	<font color='blue'>适用于使用malloc函数动态分配获得的内存。</font></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//完成数组中元素初始化为0</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N_VALUES 5</span></span><br><span class="line"><span class="type">float</span> values[N_VALUES];</span><br><span class="line"><span class="type">float</span> *vp;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ( vp = &amp;values[<span class="number">0</span>]; vp &lt; &amp;values[N_VALUES]; )</span><br><span class="line">    *vp++ = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="b-指针-指针"><a href="#b-指针-指针" class="headerlink" title="b. 指针 - 指针"></a>b. 指针 - 指针</h4><p>​	只有当两个指针都指向同一个数组中的元素时，才允许从一个指针减去零一个指针；</p>
+<p>​	<font color='red' size=5>减法运算的值是两个指针在内存中的距离。</font></p>
+<h3 id="12-2-关系运算"><a href="#12-2-关系运算" class="headerlink" title="12.2 关系运算"></a>12.2 关系运算</h3><p>​	&lt;	&lt;&#x3D;	&gt;	&gt;&#x3D;</p>
+<p>​	可以使用上述关系操作符对两个指针值进行比较，前提是它们都指向同一个数组中的元素。</p>
+<p>​	根据所使用的操作符，<font color='blue'>比较表达式将告诉你哪个指针指向数组中更前或更后的元素</font></p>
+<p>​	<font color='orange'>标准允许指向数组元素的指针与指向数组最后一个元素后面的那个内存位置的指针进行比较，但不允许与指向数组第一个元素之前的那个内存位置的指针进行比较</font></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/10/25/%E7%AC%AC6%E7%AB%A0%20%E6%8C%87%E9%92%88/" data-id="cm2oh3ity0000bodk5vxu6p4p" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-chenge-first-blog" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/10/25/chenge-first-blog/" class="article-date">
@@ -208,6 +382,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2024/10/25/%E7%AC%AC6%E7%AB%A0%20%E6%8C%87%E9%92%88/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2024/10/25/chenge-first-blog/">(no title)</a>
