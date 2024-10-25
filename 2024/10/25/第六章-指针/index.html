@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>Hexo</title>
+  <title>第六章 指针 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="title: 第六章 指针 第六章 指针1. 内存和地址 计算机的内存由数以亿万计的位（bit）组成，每个位可以容纳值0或1。 一个位所能表示的值的范围太有限，通常将许多为合成一组作为一个单位。 在许多现代的机器上。每个字节（byte）包含8个位，可以存储无符号值0~255，或有符号值-128~127。 为了存储更大的值，我们把两个或更多个字节结合在一起作为一个更大的内存单位。 记住：名字与内存位">
+  <meta name="description" content="第六章 指针1. 内存和地址 计算机的内存由数以亿万计的位（bit）组成，每个位可以容纳值0或1。 一个位所能表示的值的范围太有限，通常将许多为合成一组作为一个单位。 在许多现代的机器上。每个字节（byte）包含8个位，可以存储无符号值0~255，或有符号值-128~127。 为了存储更大的值，我们把两个或更多个字节结合在一起作为一个更大的内存单位。 记住：名字与内存位置之间的关联并不是硬件来提供">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/2024/10/25/%E7%AC%AC6%E7%AB%A0%20%E6%8C%87%E9%92%88/index.html">
+<meta property="og:title" content="第六章 指针">
+<meta property="og:url" content="http://example.com/2024/10/25/%E7%AC%AC%E5%85%AD%E7%AB%A0-%E6%8C%87%E9%92%88/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="title: 第六章 指针 第六章 指针1. 内存和地址 计算机的内存由数以亿万计的位（bit）组成，每个位可以容纳值0或1。 一个位所能表示的值的范围太有限，通常将许多为合成一组作为一个单位。 在许多现代的机器上。每个字节（byte）包含8个位，可以存储无符号值0~255，或有符号值-128~127。 为了存储更大的值，我们把两个或更多个字节结合在一起作为一个更大的内存单位。 记住：名字与内存位">
+<meta property="og:description" content="第六章 指针1. 内存和地址 计算机的内存由数以亿万计的位（bit）组成，每个位可以容纳值0或1。 一个位所能表示的值的范围太有限，通常将许多为合成一组作为一个单位。 在许多现代的机器上。每个字节（byte）包含8个位，可以存储无符号值0~255，或有符号值-128~127。 为了存储更大的值，我们把两个或更多个字节结合在一起作为一个更大的内存单位。 记住：名字与内存位置之间的关联并不是硬件来提供">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-10-25T08:31:03.987Z">
-<meta property="article:modified_time" content="2024-10-25T08:44:38.974Z">
+<meta property="article:published_time" content="2024-10-25T08:46:01.000Z">
+<meta property="article:modified_time" content="2024-10-25T08:46:35.282Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -71,20 +71,29 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-第6章 指针" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-第六章-指针" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2024/10/25/%E7%AC%AC6%E7%AB%A0%20%E6%8C%87%E9%92%88/" class="article-date">
-  <time class="dt-published" datetime="2024-10-25T08:31:03.987Z" itemprop="datePublished">2024-10-25</time>
+    <a href="/2024/10/25/%E7%AC%AC%E5%85%AD%E7%AB%A0-%E6%8C%87%E9%92%88/" class="article-date">
+  <time class="dt-published" datetime="2024-10-25T08:46:01.000Z" itemprop="datePublished">2024-10-25</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      第六章 指针
+    </h1>
+  
+
+      </header>
+    
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>title: 第六章 指针</p>
-<h1 id="第六章-指针"><a href="#第六章-指针" class="headerlink" title="第六章 指针"></a>第六章 指针</h1><h2 id="1-内存和地址"><a href="#1-内存和地址" class="headerlink" title="1. 内存和地址"></a>1. 内存和地址</h2><ol>
+        <h1 id="第六章-指针"><a href="#第六章-指针" class="headerlink" title="第六章 指针"></a>第六章 指针</h1><h2 id="1-内存和地址"><a href="#1-内存和地址" class="headerlink" title="1. 内存和地址"></a>1. 内存和地址</h2><ol>
 <li>计算机的内存由数以亿万计的位（bit）组成，每个位可以容纳值0或1。</li>
 <li>一个位所能表示的值的范围太有限，通常将许多为合成一组作为一个单位。</li>
 <li>在许多现代的机器上。每个字节（byte）包含8个位，可以存储无符号值0~255，或有符号值-128~127。</li>
@@ -234,7 +243,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/10/25/%E7%AC%AC6%E7%AB%A0%20%E6%8C%87%E9%92%88/" data-id="cm2oh3ity0000bodk5vxu6p4p" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/10/25/%E7%AC%AC%E5%85%AD%E7%AB%A0-%E6%8C%87%E9%92%88/" data-id="cm2ohnfle0000uodk4o7beyq7" data-title="第六章 指针" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -285,7 +294,7 @@
       <ul>
         
           <li>
-            <a href="/2024/10/25/%E7%AC%AC6%E7%AB%A0%20%E6%8C%87%E9%92%88/">(no title)</a>
+            <a href="/2024/10/25/%E7%AC%AC%E5%85%AD%E7%AB%A0-%E6%8C%87%E9%92%88/">第六章 指针</a>
           </li>
         
           <li>
