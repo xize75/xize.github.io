@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>第7章 函数 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="第七章 函数1.函数的定义​	函数的定义就是函数体的实现。 1.1函数定义的语法：12345678&#x2F;*类型函数名( 形式参数 )代码块*&#x2F;void function_name()&#123;    &#125;  1.2 return语句​	当执行流到达函数定义的末尾时，函数就将返回（return），也就是说，执行流返回到函数被调用的地方。return语句允许从函数体的任何位置返回，并不一定要在函">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第7章 函数">
+<meta property="og:url" content="http://example.com/2024/11/05/%E7%AC%AC7%E7%AB%A0-%E5%87%BD%E6%95%B0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="第七章 函数1.函数的定义​	函数的定义就是函数体的实现。 1.1函数定义的语法：12345678&#x2F;*类型函数名( 形式参数 )代码块*&#x2F;void function_name()&#123;    &#125;  1.2 return语句​	当执行流到达函数定义的末尾时，函数就将返回（return），也就是说，执行流返回到函数被调用的地方。return语句允许从函数体的任何位置返回，并不一定要在函">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-11-05T08:34:02.000Z">
+<meta property="article:modified_time" content="2024-11-05T08:34:33.129Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-第7章-函数" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/11/05/%E7%AC%AC7%E7%AB%A0-%E5%87%BD%E6%95%B0/" class="article-date">
+  <time class="dt-published" datetime="2024-11-05T08:34:02.000Z" itemprop="datePublished">2024-11-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      第7章 函数
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="第七章-函数"><a href="#第七章-函数" class="headerlink" title="第七章 函数"></a>第七章 函数</h1><h2 id="1-函数的定义"><a href="#1-函数的定义" class="headerlink" title="1.函数的定义"></a>1.函数的定义</h2><p>​	函数的定义就是函数体的实现。</p>
+<h3 id="1-1函数定义的语法："><a href="#1-1函数定义的语法：" class="headerlink" title="1.1函数定义的语法："></a>1.1函数定义的语法：</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">类型</span></span><br><span class="line"><span class="comment">函数名( 形式参数 )</span></span><br><span class="line"><span class="comment">代码块</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">function_name</span><span class="params">()</span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-2-return语句"><a href="#1-2-return语句" class="headerlink" title="1.2 return语句"></a>1.2 return语句</h3><p>​	当执行流到达函数定义的末尾时，函数就将返回（return），也就是说，执行流返回到函数被调用的地方。return语句允许从函数体的任何位置返回，并不一定要在函数体的末尾。</p>
+<p>​	只有当编译器可以通过寻常算术转换把表达式的类型转换为正确的类型时，才允许返回的类型与函数声明的返回类型不同的表达式。</p>
+<h2 id="2-函数的声明"><a href="#2-函数的声明" class="headerlink" title="2. 函数的声明"></a>2. 函数的声明</h2><h3 id="2-1-原型"><a href="#2-1-原型" class="headerlink" title="2.1 原型"></a>2.1 原型</h3><p>​	原型总结了函数定义的起始部分的声明，向编译器提供有关该函数应该如何调用的完整信息。</p>
+<p>​	使用原型最方便且最安全的方法是把原型置于一个单独的文件（调用使用#include指令包含该文件）。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> *<span class="title function_">find_int</span><span class="params">( <span class="type">int</span> key, <span class="type">int</span> <span class="built_in">array</span>, <span class="type">int</span> len )</span>;</span><br><span class="line"><span class="comment">//一个没有参数的函数的原型如下</span></span><br><span class="line"><span class="type">int</span> *<span class="title function_">func</span><span class="params">( <span class="type">void</span> )</span>;</span><br><span class="line"><span class="comment">//关键字void提示没有任何参数，而不是表示它有一个类型为void的参数</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-函数的参数"><a href="#3-函数的参数" class="headerlink" title="3. 函数的参数"></a>3. 函数的参数</h2><p>​	<font color='blue' size = 4>C语言的规则很简单：所有的参数都是传值调用。</font>这意味着函数将获得参数值的一份拷贝，这样，函数就可以放心修改这个拷贝值，而不必担心会修改调用程序实际传递给它的参数。</p>
+<p>​	但是，如果被传递的参数是一个数组名，并且在函数中使用下标引用该数组的参数，那么在函数中对数组元素进行修改时，实际上修改的是调用程序中的数组元素。</p>
+<p>​	函数将访问调用程序的数组元素，数组并不会被复制。这个行为被称为“传值调用”。</p>
+<p>​	下标引用实际上是间接访问的另一种形式，它可以对指针执行间接访问操作，访问指针指向的内存位置。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//交换调用程序中的两个整数</span></span><br><span class="line"><span class="comment">//没有效果</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">swap</span><span class="params">( <span class="type">int</span> x, <span class="type">int</span> y )</span>&#123;</span><br><span class="line">    <span class="type">int</span> temp;</span><br><span class="line">    temp = x;</span><br><span class="line">    x = y;</span><br><span class="line">    y = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//有用的程序</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">swap</span><span class="params">( <span class="type">int</span> *x, <span class="type">int</span> *y )</span>&#123;</span><br><span class="line">    <span class="type">int</span> temp;</span><br><span class="line">    temp = *x;</span><br><span class="line">    *x = *y;</span><br><span class="line">    *y = temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​	</p>
+<p>​	声明数组参数时不指定它的长度是合法的，因为函数并不为数组元素分配内存。</p>
+<p>​	但是，如果一个函数需要这个值，它必须作为参数显式地传递给函数。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">clear_array</span><span class="params">( <span class="type">int</span> <span class="built_in">array</span>[], <span class="type">int</span> length )</span>&#123;</span><br><span class="line">    ···</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-ADT和黑盒"><a href="#4-ADT和黑盒" class="headerlink" title="4. ADT和黑盒"></a>4. ADT和黑盒</h2><p>​	C可以用于设计和实现抽象数据类型（ADT），因为它可以限制函数和数据定义的作用域。这个技巧也被称为黑盒设计。</p>
+<p>​	抽象数据类型的基本想法是很简单的——模块具有&#x3D;&#x3D;功能说明和接口说明&#x3D;&#x3D;，前者说明模块所执行的任务，后者定义模块的使用。</p>
+<p>​	限制对模块的访问是通过合理使用static（p45）关键字来实现的，它可以限制对那些并非接口的函数和数据的访问。</p>
+<p>​	程序参考（p125）</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//addrlist.h</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">地址列表模块的声明</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> NAME_LENGTH 30</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ADDR_LENGTH 100</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> PHONE_LENGTH 11</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAX_ADDRESSES 1000</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//接口函数</span></span><br><span class="line"><span class="comment">//给出一个名字，查找对应的地址</span></span><br><span class="line"><span class="type">char</span> <span class="type">const</span> *<span class="title function_">lookup_address</span><span class="params">( <span class="type">char</span> <span class="type">const</span> *name )</span>;</span><br><span class="line"><span class="comment">//给出一个名字，查找对应的电话号码</span></span><br><span class="line"><span class="type">char</span> <span class="type">const</span> *<span class="title function_">lookup_phone</span><span class="params">( <span class="type">char</span> <span class="type">const</span> *name )</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">地址列表模块的实现</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&quot;addrlist.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">static</span> <span class="type">char</span> name[MAX_ADDRESSES][NAME_LENGTH]；</span><br><span class="line"><span class="type">static</span> <span class="type">char</span> address[MAX_ADDRESSES][ADDR_LENGTH];</span><br><span class="line"><span class="type">static</span> <span class="type">char</span> phone[MAX_ADDRESSES][PHONE_LENGTH];</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">这个函数在数组中查找一个名字并返回查找到的位置的下标</span></span><br><span class="line"><span class="comment">如果这个名字在数组中并不存在，函数返回-1</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="type">static</span> <span class="type">int</span> <span class="title function_">find_entry</span><span class="params">( <span class="type">char</span> <span class="type">const</span> *name_to_find )</span>&#123;</span><br><span class="line">    <span class="type">int</span> entry;</span><br><span class="line">	<span class="keyword">for</span>( entry = <span class="number">0</span>; entry &lt; MAX_ADDRESSES; entry += <span class="number">1</span> )</span><br><span class="line">		<span class="keyword">if</span>( <span class="built_in">strcmp</span>( name_to_find, name[entry]) == <span class="number">0</span> )</span><br><span class="line">			<span class="keyword">return</span> entry;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">接口函数</span></span><br><span class="line"><span class="comment">给定一个名字，查找并返回对应的地址。</span></span><br><span class="line"><span class="comment">如果名字没有找到，函数返回一个NULL指针。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="type">char</span> <span class="type">const</span> *<span class="title function_">lookup_address</span><span class="params">(<span class="type">char</span> <span class="type">const</span> *name)</span>&#123;</span><br><span class="line">    <span class="type">int</span> entry;</span><br><span class="line">	entry =find_entry( name );</span><br><span class="line">    <span class="keyword">if</span>( entry == <span class="number">-1</span> )</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> address[entry];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">接口函数</span></span><br><span class="line"><span class="comment">给定一个名字，查找并返回对应的电话号码。</span></span><br><span class="line"><span class="comment">如果名字没有找到，函数返回一个NULL指针。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="type">char</span> <span class="type">const</span> *lookup <span class="title function_">phone</span><span class="params">(<span class="type">char</span> <span class="type">const</span> *name )</span>&#123;</span><br><span class="line">    <span class="type">int</span> entry;</span><br><span class="line">	entry = find_entry( name );</span><br><span class="line">        <span class="keyword">if</span>( entry == <span class="number">-1</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> phone[entry];</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-递归"><a href="#5-递归" class="headerlink" title="5. 递归"></a>5. 递归</h2><p>​	C通过运行时堆栈支持递归函数的实现。递归函数就是直接或间接调用自身的函数。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">接受一个整型值（无符号），把它转换为字符并打印它。前导零被删除。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">binary_to_ascii</span><span class="params">( <span class="type">unsigned</span> <span class="type">int</span> value )</span>&#123;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> quotient;</span><br><span class="line">    quotient = value / <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">if</span>( quotient != <span class="number">0</span> )</span><br><span class="line">        binary_to_ascii( quotient );</span><br><span class="line">    <span class="built_in">putchar</span>( value % <span class="number">10</span> + <span class="string">&#x27;0&#x27;</span> );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​	<font color='blue'>递归所需要的两个特性</font>：a. 存在限制条件，当符合这个条件时递归便不再继续；b. 每次递归调用之后越来越接近这个限制条件。</p>
+<p>​	<font color='red'>递归的陷阱</font>：递归函数调用将涉及一些运行时的开销——参数必须压到堆栈中、为局部变量分配内存空间、寄存器的值必须保存等。</p>
+<h2 id="6-可变参数列表"><a href="#6-可变参数列表" class="headerlink" title="6. 可变参数列表"></a>6. 可变参数列表</h2><p>​	可变参数列表是通过宏来实现的，这些宏定义于stdarg.h头文件，是标准库的一部分。</p>
+<p>​	这个头文件声明了<font color='blue'>一个类型va_list和3个宏——va_start、va_arg和va_end。</font></p>
+<p>​	v_list用于声明变量，用于访问参数列表的未确定部分。</p>
+<p>​	va_start用于初始化，第1个参数是va_list变量的名字，第2个参数是省略号前最后一个有名字的参数。初始化过程把num变量设置为只想可变参数部分的第1个参数。</p>
+<p>​	为了访问参数，需要使用va_arg，接受两个参数：va_list变量(num)和参数列表中下一个参数的类型。va_arg返回这个参数的值，并使num指向下一个可变参数。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdarg.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">float</span> <span class="title function_">average</span><span class="params">( <span class="type">int</span> n_values, ··· )</span>&#123;</span><br><span class="line">    va_list num;</span><br><span class="line">    <span class="type">int</span> count;</span><br><span class="line">    <span class="type">float</span> sum = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    准备访问可变参数</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    va_start( num, n_values );</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    添加取自可变参数列表的值</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">for</span>( count = <span class="number">0</span>; count &lt; n_values; count +=<span class="number">1</span> )&#123;</span><br><span class="line">        sum += va_arg( num, <span class="type">int</span> );</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    完成处理可变参数</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    va_end( num );</span><br><span class="line">    <span class="keyword">return</span> sum / n_values;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/11/05/%E7%AC%AC7%E7%AB%A0-%E5%87%BD%E6%95%B0/" data-id="cm3472g5n0000v0dk39y16v4y" data-title="第7章 函数" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2024/10/25/%E7%AC%AC5%E7%AB%A0-%E6%93%8D%E4%BD%9C%E7%AC%A6%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">第5章 操作符和表达式</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/11111/" rel="tag">11111</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/11111/" style="font-size: 10px;">11111</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">November 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/11/05/%E7%AC%AC7%E7%AB%A0-%E5%87%BD%E6%95%B0/">第7章 函数</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/25/%E7%AC%AC5%E7%AB%A0-%E6%93%8D%E4%BD%9C%E7%AC%A6%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/">第5章 操作符和表达式</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/25/%E7%AC%AC4%E7%AB%A0-%E8%AF%AD%E5%8F%A5/">第4章 语句</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/25/%E7%AC%AC6%E7%AB%A0-%E6%8C%87%E9%92%88/">第6章 指针</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/25/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
