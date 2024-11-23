@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>第8章 数组 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="第八章 数组1. 一维数组1.1 数组名12int a;int b[100];  ​	我们把变量a称为标量，因为它是个单一的值，这个变量的类型是一个整数。我们把变量b称为数组，因为它是一些值的集合。 ​	在C中，在几乎所有使用数组名的表达式中，数组名的值是一个指针常量，也就是数组第一个元素的地址。 1234int a[10];int b[10];int *c;c &#x3D; &amp;a[0];  ​	表">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第8章 数组">
+<meta property="og:url" content="http://example.com/2024/11/06/%E7%AC%AC8%E7%AB%A0-%E6%95%B0%E7%BB%84/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="第八章 数组1. 一维数组1.1 数组名12int a;int b[100];  ​	我们把变量a称为标量，因为它是个单一的值，这个变量的类型是一个整数。我们把变量b称为数组，因为它是一些值的集合。 ​	在C中，在几乎所有使用数组名的表达式中，数组名的值是一个指针常量，也就是数组第一个元素的地址。 1234int a[10];int b[10];int *c;c &#x3D; &amp;a[0];  ​	表">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20241106163339029.png">
+<meta property="og:image" content="c:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20241115154445480.png">
+<meta property="og:image" content="c:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20241115161638338.png">
+<meta property="og:image" content="c:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20241115161721782.png">
+<meta property="og:image" content="c:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20241115161813443.png">
+<meta property="og:image" content="c:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20241121161716022.png">
+<meta property="og:image" content="c:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20241121161931441.png">
+<meta property="article:published_time" content="2024-11-06T05:58:39.000Z">
+<meta property="article:modified_time" content="2024-11-23T15:15:23.813Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20241106163339029.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-第8章-数组" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/11/06/%E7%AC%AC8%E7%AB%A0-%E6%95%B0%E7%BB%84/" class="article-date">
+  <time class="dt-published" datetime="2024-11-06T05:58:39.000Z" itemprop="datePublished">2024-11-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      第8章 数组
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="第八章-数组"><a href="#第八章-数组" class="headerlink" title="第八章 数组"></a>第八章 数组</h1><h2 id="1-一维数组"><a href="#1-一维数组" class="headerlink" title="1. 一维数组"></a>1. 一维数组</h2><h3 id="1-1-数组名"><a href="#1-1-数组名" class="headerlink" title="1.1 数组名"></a>1.1 数组名</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a;</span><br><span class="line"><span class="type">int</span> b[<span class="number">100</span>];</span><br></pre></td></tr></table></figure>
+
+<p>​	我们把变量a称为标量，因为它是个单一的值，这个变量的类型是一个整数。我们把变量b称为数组，因为它是一些值的集合。</p>
+<p>​	在C中，在几乎所有使用数组名的表达式中，<font color='red'>数组名的值是一个指针常量</font><font color='red'>，也就是数组第一个元素的地址。</font></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">10</span>];</span><br><span class="line"><span class="type">int</span> b[<span class="number">10</span>];</span><br><span class="line"><span class="type">int</span> *c;</span><br><span class="line">c = &amp;a[<span class="number">0</span>];</span><br></pre></td></tr></table></figure>
+
+<p>​	表达式&amp;a[0]是一个指向数组第一个元素的指针，等价于  c &#x3D; a，实际被赋值的是一个指针的拷贝，c所指向的是数组的第一个元素。</p>
+<p>​	基于以上的解释，b &#x3D; a是非法的，必须使用一个循环来赋值；a &#x3D; c也是非法的，a的值是一个常量，不能被修改。</p>
+<h3 id="1-2-下标引用"><a href="#1-2-下标引用" class="headerlink" title="1.2 下标引用"></a>1.2 下标引用</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*( b + <span class="number">3</span> )</span><br></pre></td></tr></table></figure>
+
+<p>​	b的值是一个指向整型的指针，所以3这个值根据整型值的长度进行调整。</p>
+<p>​	除优先级外，下标引用和间接访问完全相同。例如，下面这两个表达式是等同的：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">array</span>[subscript]</span><br><span class="line">*( <span class="built_in">array</span> + ( subscript ) )</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-3-指针与下标、指针的效率"><a href="#1-3-指针与下标、指针的效率" class="headerlink" title="1.3 指针与下标、指针的效率"></a>1.3 指针与下标、指针的效率</h3><p>​	在可读性方面，下标具有一定的优势，但可能会影响运行时的效率。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="built_in">array</span>[<span class="number">10</span>], a;</span><br><span class="line"><span class="keyword">for</span>( a = <span class="number">0</span>;a &lt; <span class="number">10</span>; a += <span class="number">1</span> )</span><br><span class="line">    <span class="built_in">array</span>[a] = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+
+<p>​	为了对下标表达式求值，编译器在程序中插入指令，取得a的值，并把它与整型的长度(也就是 4)相乘。这个乘法需要花费一定的时间和空间。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="built_in">array</span>[<span class="number">10</span>], *ap;</span><br><span class="line"><span class="keyword">for</span>( ap = <span class="built_in">array</span>; ap &lt; <span class="built_in">array</span> + <span class="number">10</span>; ap++ )</span><br><span class="line">    *ap = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+
+<p>​	现在，这个乘法运算出现在for语句的调整部分。1这个值必须与整型的长度相乘，然后再与指针相加。但这里存在一个重大区别：循环每次执行时，执行乘法运算的都是两个相同的数(1和4)。结果，这个乘法只在编译时执行一次——程序现在包含了一条指令，把4与指针相加。程序在运行时并不执行乘法运算。</p>
+<p>​	这个例子说明了指针比下标更有效率的场合——当在数组中一次一步(或某个固定的数字)地移动时，与固定数字相乘的运算在编译时完成，所以在运行时所需的指令就少一些。在绝大多数机器上，程序将会更小一些，更快一些。</p>
+<p>​	但同时也要注意程序的可维护性。</p>
+<h3 id="1-5-数组和指针"><a href="#1-5-数组和指针" class="headerlink" title="1.5 数组和指针"></a>1.5 数组和指针</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">5</span>];</span><br><span class="line"><span class="type">int</span> *b;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>​	声明一个数组时，编译器将根据声明所指定的元素数量为数组保留内存空间，然后再创建数组名，它的值是一个常量，指向这段空间的起始位置。</p>
+<p>​	声明一个指针变量时，编译器只会为指针本身保留内存空间，它并不为任何整型值分配内存空间</p>
+<img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20241106163339029.png" alt="image-20241106163339029" style="zoom:80%;" />
+
+<h3 id="1-6-作为函数参数的数组名"><a href="#1-6-作为函数参数的数组名" class="headerlink" title="1.6 作为函数参数的数组名"></a>1.6 作为函数参数的数组名</h3><p>​	当一个数组名作为参数传递给一个函数时，<font color='orange'>传递给函数的是一份该指针的拷贝</font>。函数如果执行了下标引用，实际上是对这个指针执行间接访问操作，并且通过这种间接访问，函数可以访问和修改调用程序的数组元素。</p>
+<p>​	<font color='blue'>传址调用</font>是通过传递一个指向所需元素的指针，然后再函数中对该指针执行间接访问操作实现对数据的访问。</p>
+<p>​	无论函数对参数（指针）如何进行修改，都不会修改调用程序的指针实参本身（但可能修改它所指向的内容）。</p>
+<h3 id="1-7-声明数组参数"><a href="#1-7-声明数组参数" class="headerlink" title="1.7 声明数组参数"></a>1.7 声明数组参数</h3><p>​	调用函数时实际传递的是一个指针，所以函数的形参实际是个指针。但为了使程序员新手更容易上手，编译器也接受数组形式的函数形参。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">strlen</span><span class="params">( <span class="type">char</span> *<span class="built_in">string</span> )</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">strlen</span><span class="params">( <span class="type">char</span> <span class="built_in">string</span>[] )</span>;</span><br></pre></td></tr></table></figure>
+
+<pre><code> &lt;font color=&#39;orange&#39;&gt;在此推荐使用指针形式。&lt;/font&gt;
+</code></pre>
+<p>​	形参只是一个指针，他指向的是已经在其他地方分配好内存的空间。同时，这种实现方法使函数无法知道数组的长度，如果函数需要知道数组的长度，它必须作为一个显式的参数传递给函数。</p>
+<h3 id="1-8-初始化"><a href="#1-8-初始化" class="headerlink" title="1.8 初始化"></a>1.8 初始化</h3><p>​	存储于静态内存的数组只初始化一次，也就是在程序开始执行之前。如果数组未被初始化，数组元素的初始值将会被自动设置为0。</p>
+<p>​	对于自动变量，在缺省情况下是未初始化的。如果自动变量的声明中给出了初始值，每次当执行流进入自动变量声明所在的作用域时，变量就被一条隐式的赋值语句初始化。这条隐式的赋值语句和普通的赋值语句一样需要时间和空间来执行。数组的问题在于初始化列表中可能有很多值，这就可能有很多值，这就可能产生许多条赋值语句。对于那些非常庞大的数组，他的初始化时间可能非常可观。</p>
+<p>​	因此，这里就需要权衡利弊。当数组的初始化局限在一个函数(或代码块)时，应该仔细考虑一下，在程序的执行流每次进入该函数(或代码块)时，每次都对数组进行重新初始化是不是值得如果答案是否定的，就把数组声明为 static，这样数组的初始化只需在程序开始前执行一次。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="built_in">vector</span>[<span class="number">5</span>] = &#123; <span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span> &#125;;</span><br><span class="line"><span class="type">int</span> <span class="built_in">vector</span>[<span class="number">5</span>] = &#123; <span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>, <span class="number">60</span> &#125;;   <span class="comment">//非法的初始化</span></span><br><span class="line"><span class="type">int</span> <span class="built_in">vector</span>[<span class="number">5</span>] = &#123; <span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span> &#125;;   <span class="comment">//不完整的初始化</span></span><br><span class="line"><span class="type">int</span> <span class="built_in">vector</span>[] = &#123; <span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span> &#125;;  <span class="comment">//自动计算数组长度的初始化</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//字符数组的初始化</span></span><br><span class="line"><span class="type">char</span> message[] = &#123; <span class="string">&#x27;H&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;o&#x27;</span>, <span class="number">0</span> &#125;;</span><br><span class="line"><span class="comment">//一种快速的方法</span></span><br><span class="line"><span class="type">char</span> message[] = <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//字符串常量</span></span><br><span class="line"><span class="type">char</span> *message = <span class="string">&quot;Hello&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-多维数组"><a href="#2-多维数组" class="headerlink" title="2. 多维数组"></a>2. 多维数组</h2><p>​	多维数组，例如：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a;</span><br><span class="line"><span class="type">int</span> b[<span class="number">5</span>];</span><br><span class="line"><span class="type">int</span> c[<span class="number">6</span>][<span class="number">10</span>];</span><br></pre></td></tr></table></figure>
+
+<p>​	a是一个简单的整数。接下来的那个声明增加了一个维数，所以b是一个向量，它包含5个整型元素。</p>
+<p>​	c只是在b的基础上再增加一维，所以可以把c看作一个包含6个元素的向量，只不过它的每个元素本身是一个包含10个整形元素的向量。<font color='orange'>换句话说，c是一个一维数组的一维数组。</font></p>
+<h3 id="2-1-存储顺序"><a href="#2-1-存储顺序" class="headerlink" title="2.1 存储顺序"></a>2.1 存储顺序</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="built_in">array</span>[<span class="number">3</span>][<span class="number">6</span>];</span><br></pre></td></tr></table></figure>
+
+<p>​	它在内存中的存储顺序，如图所示：</p>
+<p><img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20241115154445480.png" alt="image-20241115154445480"></p>
+<p>​	在C中，多维数组的元素存储顺序按照最右边的小标率先变化的原则，称为行主序。</p>
+<h3 id="2-2-数组名"><a href="#2-2-数组名" class="headerlink" title="2.2 数组名"></a>2.2 数组名</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> matrix[<span class="number">3</span>][<span class="number">10</span>];</span><br></pre></td></tr></table></figure>
+
+<p>​	创建了matrix，它&#x2F;可以看作一个一维数组，包含3个元素，只是每个元素恰好是包含10个整型元素的数组</p>
+<p>​	多维数组第一维的元素实际上是另一个数组。matrix这个名字的值是一个指向它第一个元素的指针，所以matrix是一个指向一个包含10个整形元素的数组的指针。</p>
+<h3 id="2-3-下标"><a href="#2-3-下标" class="headerlink" title="2.3 下标"></a>2.3 下标</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> matrix[<span class="number">3</span>][<span class="number">10</span>];</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*matrix;</span><br></pre></td></tr></table></figure>
+
+<img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20241115161638338.png" alt="image-20241115161638338" style="zoom:80%;" />
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*( matrix + <span class="number">1</span> );</span><br></pre></td></tr></table></figure>
+
+<img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20241115161721782.png" alt="image-20241115161721782" style="zoom:80%;" />
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*( *( matrix + <span class="number">1</span> ) + <span class="number">5</span> );</span><br><span class="line">*( matrix[<span class="number">1</span>] + <span class="number">5</span> );</span><br><span class="line">matrix[<span class="number">1</span>][<span class="number">5</span>];</span><br></pre></td></tr></table></figure>
+
+<img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20241115161813443.png" alt="image-20241115161813443" style="zoom:80%;" />
+
+<p>​	<font color='red' size='5'>下标引用实际上只是间接访问表达式的一种伪装形式</font></p>
+<h3 id="2-4-指向数组的指针"><a href="#2-4-指向数组的指针" class="headerlink" title="2.4 指向数组的指针"></a>2.4 指向数组的指针</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="built_in">vector</span>[<span class="number">10</span>], *vp = <span class="built_in">vector</span>;</span><br><span class="line"><span class="type">int</span> matrix[<span class="number">3</span>][<span class="number">10</span>], *mp = matrix;</span><br></pre></td></tr></table></figure>
+
+<p>​	第一个声明是合法的。它为一个整型数组分配内存，把vp声明为一个指向整型的指针，并把它初始化为指向vector数组的第一个元素。vector和vp具有相同的类型：指向整形的指针。</p>
+<p>​	第二个声明是非法的。它正确正确地创建了matrix数组，并把mp声明为一个指向整型的指针。但是它的初始化是错误的，因为matrix并不是一个指向整型的指针，而是一个指向整型数组的指针。</p>
+<p>​	正确地声明：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> (*p)[<span class="number">10</span>] = matrix;</span><br></pre></td></tr></table></figure>
+
+<p>​	下标引用的优先级高于间接访问，但由于括号的存在，首先执行的还是间接访问。所以，p是个指针。接下来执行的是下标引用，所以p指向某种类型的数组。</p>
+<p>​	当把p与一个整数相加时，该整数值首先根据10个整型值的长度进行调整，然后再执行加法。所以可以使用这个指针一行一行地在matrix中移动。</p>
+<p>​	如果需要一个指针<u><strong>逐个访问整型元素</strong></u>而不是逐行在数组中移动，可以初始化为：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> *pi = &amp;matrix[<span class="number">0</span>][<span class="number">0</span>];</span><br><span class="line"><span class="type">int</span> *pi = matrix[<span class="number">0</span>];</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-5-作为函数参数的多维数组"><a href="#2-5-作为函数参数的多维数组" class="headerlink" title="2.5 作为函数参数的多维数组"></a>2.5 作为函数参数的多维数组</h3><p>​	作为函数参数的多维数组名的传递方式和一维数组名相同——<font color='blue'>实际传递的是个指向数组第一个元素的指针。</font></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> matrix[<span class="number">3</span>][<span class="number">10</span>];</span><br><span class="line">func2( matrix );</span><br></pre></td></tr></table></figure>
+
+<p>​	这里，参数matrix的类型是指向包含10个整形元素的数组指针。func2的原型为：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">func2</span><span class="params">( <span class="type">int</span> (*mat)[<span class="number">10</span>] )</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">func2</span><span class="params">( <span class="type">int</span> mat[][<span class="number">10</span>] )</span>;</span><br></pre></td></tr></table></figure>
+
+<p>​	在这个函数中，mat的第一个下标根据包含10个元素的整型数组的长度进行调整，接着第二个下标根据整形的长度进行调整。</p>
+<p>​	这里的关键在于编译器必须知道第二个及以后各维的长度才能对各下标进行求值，因此在原型中必须声明这些维的长度。第一维的长度并不需要，因为在计算下标值时用不到它。</p>
+<h3 id="2-6-初始化"><a href="#2-6-初始化" class="headerlink" title="2.6 初始化"></a>2.6 初始化</h3><p>​	<font color='orange'>多维数组的存储顺序是根据最右边的下标率先变化的原则确定的。</font></p>
+<p>​	两种初始化的方法：</p>
+<p>​	a. 只给出一个长长的初始值列表，如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> matrix[<span class="number">2</span>][<span class="number">3</span>] = &#123; <span class="number">100</span>, <span class="number">101</span>, <span class="number">102</span>, <span class="number">103</span>, <span class="number">104</span>, <span class="number">105</span> &#125;;</span><br></pre></td></tr></table></figure>
+
+<p>​	b. 基于多维数组实际上是复杂元素的一维数组这个概念。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> tow_dim[<span class="number">3</span>][<span class="number">5</span>];</span><br><span class="line"><span class="type">int</span> two_dim[<span class="number">3</span>][<span class="number">5</span>] = &#123;</span><br><span class="line">    &#123; <span class="number">00</span>, <span class="number">01</span>, <span class="number">02</span>, <span class="number">03</span>, <span class="number">04</span> &#125;,</span><br><span class="line">    &#123; <span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>, <span class="number">14</span> &#125;,</span><br><span class="line">    &#123; <span class="number">20</span>, <span class="number">21</span>, <span class="number">22</span>, <span class="number">23</span>, <span class="number">24</span> &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>​	我们可以把two_dim看作是一个包含3个（复杂的）元素的一维数组。</p>
+<p>​	如果把这个例子中除最外层之外的花括号都去掉，剩下的就和和第一个例子一样的简单初始化列表。那些花括号只是起到了在初始化列表内部逐行定界的作用。</p>
+<h3 id="2-7-数组长度自动计算"><a href="#2-7-数组长度自动计算" class="headerlink" title="2.7 数组长度自动计算"></a>2.7 数组长度自动计算</h3><p>​	在多维数组中，只有第一维才能根据初始化列表缺省地提供。剩余的几维必须显式地写出，这样编译器就能推断出每个子数组维数的长度。例如：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> two_dim[][<span class="number">5</span>] = &#123;</span><br><span class="line">    &#123; <span class="number">00</span>, <span class="number">01</span>, <span class="number">02</span> &#125;,</span><br><span class="line">    &#123; <span class="number">10</span>, <span class="number">11</span> &#125;,</span><br><span class="line">    &#123; <span class="number">20</span>, <span class="number">21</span>, <span class="number">22</span>, <span class="number">23</span> &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-指针数组"><a href="#3-指针数组" class="headerlink" title="3. 指针数组"></a>3. 指针数组</h2><p>​	指针数组的声明，例如：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> *api[<span class="number">10</span>];</span><br></pre></td></tr></table></figure>
+
+<p>​	下标引用的优先级高于间接访问，所以在这个表达式中，先执行下标引用。因此，api是某种类型的数组。在取得一个数组元素之后，随即执行的是间接访问操作。这个表达式不再有其他操作符，所以它的结果是一个整型值。</p>
+<p>​	那么api到底是什么东西？对数组的某个元素执行间接访问操作后，我们得到一个整型值，所以api肯定是个数组，它的元素类型是指向整型的指针。</p>
+<p>​	什么地方会使用指针数组呢？这里有一个例子：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> <span class="type">const</span> keyword[] = &#123;</span><br><span class="line">    <span class="string">&quot;do&quot;</span>,</span><br><span class="line">    <span class="string">&quot;for&quot;</span>,</span><br><span class="line">    <span class="string">&quot;if&quot;</span>,</span><br><span class="line">    <span class="string">&quot;register&quot;</span>,</span><br><span class="line">    <span class="string">&quot;return&quot;</span>,</span><br><span class="line">    <span class="string">&quot;switch&quot;</span>,</span><br><span class="line">    <span class="string">&quot;while&quot;</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N_KEYWORD ( sizeof( keyword ) / sizeof( keyword[0] ) )</span></span><br></pre></td></tr></table></figure>
+
+<p>​	注意sizeof的用途，它用于对数组中的元素进行自动计数。sizeof(keyword)的结果是整个数组所占用的字节数，而sizeof(keyword[0])的结果则是数组每个元素所占用的字节数。这两个值相除，结果就是数组元素的个数。</p>
+<p>​	这个数组可以用于一个计算C源文件中关键字个数的程序中。输入的每个单词将与列表中的字符串进行比较，所有的匹配都将被计数。</p>
+<p>​	下面程序遍历整个关键字列表，查找是否存在与参数字符串相同的匹配。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">lookup_keyword</span><span class="params">( <span class="type">char</span> <span class="type">const</span> * <span class="type">const</span> desired_word, </span></span><br><span class="line"><span class="params">                  <span class="type">char</span> <span class="type">const</span> *keyword_table[], <span class="type">int</span> <span class="type">const</span> size )</span>&#123;</span><br><span class="line">    <span class="type">char</span> <span class="type">const</span> **kwp;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    对于列表中的每个单词···</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">for</span>( kwp = keyword_table; kwp &lt; keyword_table + size; kwp++ )&#123;</span><br><span class="line">        <span class="keyword">if</span>( <span class="built_in">strcmp</span>( desired_word, *kwp ) == <span class="number">0</span> )</span><br><span class="line">            <span class="comment">//如果这个单词与我们所查找的单词匹配，返回他在列表中的位置。</span></span><br><span class="line">            <span class="keyword">return</span> kwp - keyword_table;</span><br><span class="line">        <span class="comment">//没有找到</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​	也可以把关键字存储在一个矩阵中，如下所示：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> <span class="type">const</span> keyword[][<span class="number">9</span>] = &#123;</span><br><span class="line">    <span class="string">&quot;do&quot;</span>,</span><br><span class="line">    <span class="string">&quot;for&quot;</span>,</span><br><span class="line">    <span class="string">&quot;if&quot;</span>,</span><br><span class="line">    <span class="string">&quot;register&quot;</span>,</span><br><span class="line">    <span class="string">&quot;return&quot;</span>,</span><br><span class="line">    <span class="string">&quot;switch&quot;</span>,</span><br><span class="line">    <span class="string">&quot;while&quot;</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>​	这个声明和前面那个声明区别在什么地方呢？这个声明创建了一个矩阵，它每一行的长度刚好可以容纳最长的关键字（包括作为终止符的NUL字节）。这个矩阵的样子如下所示：</p>
+<img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20241121161716022.png" alt="image-20241121161716022" style="zoom:70%;" />
+
+<p>​	第一个声明创建了一个指针数组，每个指针元素都初始化为指向各个不同的字符串常量，如下所示：</p>
+<img src="C:\Users\LENOVO\AppData\Roaming\Typora\typora-user-images\image-20241121161931441.png" alt="image-20241121161931441" style="zoom:67%;" />
+
+<p>​	注意这两种方法在占用内存空间方面的区别。矩阵看上去效率低一些，因为它的每一行的长度都被固定为刚好能容纳最长的关键字。但是，它不需要任何指针。另外，指针数组本身也要占用空间，但是每个字符串常量占据的内存空间只是它本身的长度。</p>
+<p>​	如果需要对上一个程序进行修改，改用矩阵代替指针数组，应该怎么做呢？案可能会令人吃惊，我们只需要修改列表形参和局部变量的声明就可以了，具体的代码无须变动。由于数组名的值是一指针，因此无论传递给函数的是指针还是数组名，函数都能运行。</p>
+<p>​	哪个方案更好一些呢？这取决于希望存储的具体字符串。如果它们的长度都差不多，那么矩阵形式更紧凑一些，因为它无须使用指针。但是，如果各个字符串的长度千差万别，或者更糟——绝大多数字符串都很短，但少数几个却很长，那么指针数组形式就更紧凑一些。这取决于指针所占用的空间是否小于每个字符串都存储于固定长度的行所浪费的空间。</p>
+<p>​	实际上，除非是非常巨大的表，否则这些差别非常之小，所以根本不重要。人们时常选择指针数组方案，但略微对其做些改变：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> <span class="type">const</span> *keyword[] = &#123;</span><br><span class="line">    <span class="string">&quot;do&quot;</span>,</span><br><span class="line">    <span class="string">&quot;for&quot;</span>,</span><br><span class="line">    <span class="string">&quot;if&quot;</span>,</span><br><span class="line">    <span class="string">&quot;register&quot;</span>,</span><br><span class="line">    <span class="string">&quot;return&quot;</span>,</span><br><span class="line">    <span class="string">&quot;switch&quot;</span>,</span><br><span class="line">    <span class="string">&quot;while&quot;</span>,</span><br><span class="line">    <span class="literal">NULL</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​	这里，我们在表的末尾增加了一个 NULL指针。这个NULL指针使函数在搜索这个表时能够检测到表的结束，而无须预先知道表的长度，如下所示：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>( kwp = keyword_table; *kwp != <span class="literal">NULL</span>; kwp++ )</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/11/06/%E7%AC%AC8%E7%AB%A0-%E6%95%B0%E7%BB%84/" data-id="cm3ubbdqe0000d4dkgumb06wb" data-title="第8章 数组" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2024/11/05/C%E5%92%8C%E6%8C%87%E9%92%88/%E7%AC%AC7%E7%AB%A0-%E5%87%BD%E6%95%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">第7章 函数</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/11111/" rel="tag">11111</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/11111/" style="font-size: 10px;">11111</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/11/">November 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/11/06/%E7%AC%AC8%E7%AB%A0-%E6%95%B0%E7%BB%84/">第8章 数组</a>
+          </li>
+        
+          <li>
+            <a href="/2024/11/05/C%E5%92%8C%E6%8C%87%E9%92%88/%E7%AC%AC7%E7%AB%A0-%E5%87%BD%E6%95%B0/">第7章 函数</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/25/C%E5%92%8C%E6%8C%87%E9%92%88/%E7%AC%AC5%E7%AB%A0-%E6%93%8D%E4%BD%9C%E7%AC%A6%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/">第5章 操作符和表达式</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/25/C%E5%92%8C%E6%8C%87%E9%92%88/%E7%AC%AC4%E7%AB%A0-%E8%AF%AD%E5%8F%A5/">第4章 语句</a>
+          </li>
+        
+          <li>
+            <a href="/2024/10/25/C%E5%92%8C%E6%8C%87%E9%92%88/%E7%AC%AC6%E7%AB%A0-%E6%8C%87%E9%92%88/">第6章 指针</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
